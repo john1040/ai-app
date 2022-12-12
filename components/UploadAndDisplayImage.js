@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 const UploadAndDisplayImage = () => {
     const [selectedImage, setSelectedImage] = useState(null);
 
     return (
         <div>
-            <h1>Upload and Display Image usign React Hook's</h1>
+            <h1>Upload and Display Image usign React Hooks</h1>
             {selectedImage && (
                 <div>
-                    <img alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+                    <Image alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
                     <br />
                     <button onClick={() => setSelectedImage(null)}>Remove</button>
                 </div>
